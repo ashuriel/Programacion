@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = new int[10];
+        int contador = 0;
+
+        Console.WriteLine("Ingrese 10 números:");
+
+        for (int i = 0; i < 10; i++)
+        {
+            numeros[i] = int.Parse(Console.ReadLine());
+            char primerDigito = numeros[i].ToString()[0]; 
+
+            if ("2357".Contains(primerDigito)) 
+                contador++;
+        }
+
+        Console.WriteLine($"Cantidad de números que comienzan con un dígito primo: {contador}");
+    }
+}
